@@ -1,7 +1,33 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="Kaue Gomes">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<title>Binary To Decimal</title>
 	</head>
 	<body>
+		<strong><h1>Conversor Binario para Decimal</h1></strong>
+		<p>Digite um valor binário de até 8 dígitos:</p>
+		<input type="text" id="Valor" value="00000000">
+		<button onclick="render()">Converter</button>
+		<br>
+		<div id="BoxResultado">
+		<p id="Resultado">Resultado</p>
+		</div>
+		<script src="index.js"></script>
+		<script>
+			function render()
+			{
+				x = document.getElementById('Valor').value;
+				try {
+					document.getElementById('Resultado').innerText=BinaryToDecimal(x);
+				} catch (error) {
+					document.getElementById('Resultado').innerText=error;
+				}
+			
+			}
+		</script>
 	</body>
 </html>
